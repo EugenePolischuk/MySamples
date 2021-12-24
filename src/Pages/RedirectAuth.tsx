@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
@@ -6,7 +6,8 @@ import MediaQuery from 'react-responsive';
 import { AuthContainer } from '../Components/AuthContainer/AuthContainer';
 import { ReactComponent as Case } from '../assets/case.svg';
 import { ReactComponent as Businessman } from '../assets/businessman.svg';
-import { Link } from 'react-router-dom';
+
+import { Link, useLocation } from 'react-router-dom';
 
 interface TextProps {
   top: string;
@@ -63,6 +64,12 @@ interface IListData {
   Icon: typeof Case;
 }
 
+const useQuery = () => {
+  const { search } = useLocation();
+
+  return useMemo(() => new URLSearchParams(search), [search]);
+};
+
 export const RedirectAuth = () => {
   const [listData] = useState<IListData[]>([
     {
@@ -77,6 +84,16 @@ export const RedirectAuth = () => {
     }
   ]);
 
+  const query = useQuery();
+  const getTokens = (accessToken: string, refreshToken: string) => {
+    return { accessToken, refreshToken };
+  };
+  useEffect(() => {
+    getTokens(
+      JSON.stringify(query.get('access_token')),
+      JSON.stringify(query.get('refresh_token'))
+    );
+  }, [query]);
   return (
     <AuthContainer>
       <>

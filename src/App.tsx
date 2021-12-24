@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Routes, { RoutesAuth } from './Routes/index';
-import Store from './Redux/Store';
+import store from './Redux/Store';
 import './App.css';
 import Menu from './Components/Menu';
 import Container from './Components/Container';
@@ -38,7 +38,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Provider store={Store}>
+      <Provider store={store}>
         {routes}
         {routesAuth}
       </Provider>

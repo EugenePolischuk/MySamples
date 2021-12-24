@@ -23,7 +23,6 @@ import AddAPartner from '../Pages/Administrator/AddAPartner';
 import { FicheClient } from '../Pages/Administrator/FicheClient';
 import { TableauDeBord } from '../Pages/Administrator/TableauDeBord';
 import { IndicatorsGlobal } from '../Pages/Administrator/IndicatorGlobal';
-import { ContenuModifiablePartenaires } from '../Pages/Administrator/ContenuModifiablePartenaires';
 import { Retour } from '../Pages/Administrator/Retour';
 import { IndicateursParPartenaire } from '../Pages/Administrator/IndicateursParPartenaire';
 
@@ -33,6 +32,8 @@ import ParameterRoutes from './Parameters';
 import FeedbackRoutes from './Feedback';
 import AccompanimentRoutes from './Accompaniment';
 
+
+
 export const RoutesAuth = [
   {
     path: '/auth',
@@ -40,7 +41,7 @@ export const RoutesAuth = [
     component: Authentification
   },
   {
-    path: '/auth/redirect',
+    path: '/auth/redirect/',
     name: 'Redirect-auth',
     component: RedirectAuth
   }
@@ -125,32 +126,32 @@ const Routes = [
   {
     path: '/create-action',
     name: 'CreateAction',
-    component: CreateAction
+    component: CreateAction,
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: Contact
+    component: Contact,
   },
   {
     path: '/podcasts',
     name: 'Podcasts',
-    component: Podcasts
+    component: Podcasts,
   },
   {
     path: '/service-sheet',
     name: 'ServiceSheet',
-    component: ServiceSheet
+    component: ServiceSheet,
   },
   {
     path: '/catalog',
     name: 'Catalog',
-    component: Catalog
+    component: Catalog,
   },
   {
     path: '/informations',
     name: 'Informations',
-    component: Informations
+    component: Informations,
   },
   // admin
   {
@@ -177,17 +178,11 @@ const Routes = [
     path: '/indicateurs-par-partenaire',
     name: 'Indicateurs - Par partenaire',
     component: IndicateursParPartenaire
-  },
-  {
-    path: '/contenu-modifiable-partenaires',
-    name: 'Contenu Modifiable - Partenaires',
-    component: ContenuModifiablePartenaires
   }
-]
-  .concat(CommunicationRoutes)
-  .concat(EmployerRoutes)
-  .concat(FeedbackRoutes)
-  .concat(ParameterRoutes)
-  .concat(AccompanimentRoutes);
+].concat(CommunicationRoutes)
+ .concat(EmployerRoutes)
+ .concat(FeedbackRoutes)
+ .concat(ParameterRoutes)
+ .concat(AccompanimentRoutes);
 
 export default Routes;
