@@ -1,0 +1,46 @@
+/*table in Parameters Employers*/
+.ant-table table {
+    font-size: 14px;
+    padding: 0;
+}
+
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td {
+    padding: 16px auto !important;
+    text-align: center !important;
+}
+
+tfoot th, tfoot td {
+    background: #fafafa;
+}
+
+[data-theme="dark"] tfoot th,
+[data-theme="dark"] tfoot td {
+    background: #1d1d1d;
+}
+
+/*table in Parameters Employers*/
+
+
+/*Menu*/
+.ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after {
+    border: none !important;
+}
+
+.ant-menu-item-selected a, .ant-menu-item-selected a:hover {
+    color: black !important;
+}
+
+.ant-menu-item-selected {
+    background-color: #F5F5F5 !important;
+    border-radius: 5px;
+    color: black !important;
+}
+
+.ant-menu-item-active {
+    background-color: #F5F5F5 !important;
+}
+
+/*Menu*/
+
+
+

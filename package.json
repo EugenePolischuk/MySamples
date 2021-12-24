@@ -1,0 +1,115 @@
+{
+  "name": "phare",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/charts": "^1.2.14",
+    "@ant-design/icons": "^4.7.0",
+    "@reduxjs/toolkit": "^1.6.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-csv": "^1.1.2",
+    "@types/react-dom": "^17.0.0",
+    "antd": "^4.16.13",
+    "antd-table-saveas-excel": "^2.1.4",
+    "babel-loader": "8.1.0",
+    "D": "^1.0.0",
+    "dotenv": "^10.0.0",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "moment": "^2.29.1",
+    "nanoid": "^3.1.30",
+    "react": "^17.0.2",
+    "react-csv": "^2.0.3",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-responsive": "^9.0.0-beta.4",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-to-print": "^2.14.0",
+    "react-use": "^17.3.1",
+    "recharts": "^2.1.6",
+    "styled-components": "^5.3.3",
+    "typescript": "^4.4.4",
+    "web-vitals": "^1.0.1"
+  },
+  "engines": {
+    "node": "16.13.0",
+    "npm": "8.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=394fac417a4f"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/node-logger": "^6.3.12",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.12",
+    "@types/react-router-dom": "^5.3.2",
+    "@types/styled-components": "^5.1.15",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "chromatic": "^6.0.6",
+    "eslint": "^7.11.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-react": "^7.26.1"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "embeddedLanguageFormatting": "auto",
+    "endOfLine": "auto",
+    "htmlWhitespaceSensitivity": "strict",
+    "insertPragma": false,
+    "jsxBracketSameLine": true,
+    "jsxSingleQuote": true,
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "proseWrap": "preserve",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "useTabs": false
+  }
+}
